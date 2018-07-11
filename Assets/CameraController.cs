@@ -5,31 +5,30 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
     //=============================================================
-    public WebCamTexture webCameraTexture = null;
+    private WebCamTexture webCamTexture;
     public GameObject plane;
 
     //=============================================================
-    private void Init(){
-		CRef();
-	}
-
-	//=============================================================
-	private void CRef(){
-		
-	}
-
-	//=============================================================
-	private void Awake () {
-		Init();
-	}
-
-	private void Start () {
-        webCameraTexture = new WebCamTexture();
-        plane.GetComponent<Renderer>().material.mainTexture = webCameraTexture;
-        webCameraTexture.Play();
+    private void Init () {
+        CRef();
     }
-	
-	private void Update () {
-		    
-	}
+
+    //=============================================================
+    private void CRef () {
+    }
+
+    //=============================================================
+    private void Awake () {
+        Init();
+    }
+
+    private void Start () {
+        webCamTexture = new WebCamTexture();
+        plane.GetComponent<Renderer>().material.mainTexture = webCamTexture;
+        webCamTexture.Play();
+    }
+
+    private void Update () {
+
+    }
 }
